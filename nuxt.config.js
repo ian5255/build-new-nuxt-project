@@ -1,4 +1,9 @@
 export default {
+  server: {
+    port: process.env.NUXT_PORT || 4000, // default: 4000
+    host: process.env.NUXT_HOST || '0.0.0.0', // default: localhost,
+    timing: false
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'build-new-nuxt-project',
@@ -32,19 +37,19 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    '@nuxtjs/eslint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: '/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
